@@ -17,65 +17,61 @@
 
   <body>
     <div class="container">
-      <div class="weather-app">
-        <form class="search-form" id="search-form">
-          <div class="row">
-            <div class="col-6">
-              <input
-                type="search"
-                placeholder="Type a city.."
-                autofocus="on"
-                autocomplete="off"
-                id="city-input"
-                class="form-control shadow-sm"
-              />
-            </div>
-            <div class="col-3">
-              <input
-                type="submit"
-                value="Search"
-                class="form-control btn btn-primary shadow-sm w-100"
-              />
-            </div>
-            <div class="col-3">
-              <button
-                class="btn btn-success w-100"
-                id="current-location-button"
-              >
-                Current
-              </button>
+      <div class="weather-container">
+        <div class="clearfix">
+          <form id="weather_form" class="float-left">
+            <input
+              type="text"
+              id="weather_form-location"
+              placeholder="Enter a city"
+              autocomplete="off"
+              autofocus="on"
+            />
+            <input type="submit" value="Search" class="btn btn-primary" />
+          </form>
+          <buttton id="weather-refresh" class="float-left btn btn-success"
+            >Current Location</buttton
+          >
+        </div>
+        <div class="weather-summary">
+          <div class="weather-summary-header">
+            <h1 id="weather-location">Lisbon</h1>
+            <div id="weather-date" class="weather-detail_text">Mon 20;26</div>
+            <div class="weather-detail_text" id="weather-description">
+              Clouds
             </div>
           </div>
-        </form>
-        <h1 id="city"></h1>
-        <ul>
-          <li id="date"></li>
-          <li id="description"></li>
-        </ul>
-        <div class="row">
-          <div class="col-6">
-            <div class="clearfix">
-              <div class="float-left">
-                <span class="temperature" id="temperature"></span
-                ><span class="units">°C</span>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="clearfix">
+                <img
+                  class="weather_icon weather--today"
+                  src="https://openweathermap.org/img/w/02d.png"
+                />
+                <div class="weather-temp weather-temp--today">25</div>
+                <div class="weather-unit_text weather-unit_text--today">°C</div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="weather-detail_text">
+                "Precipitation: "
+                <span id="precipitation-probality">53%</span>
+              </div>
+              <div class="weather-detail_text">
+                "Wind: "
+                <span id="wind-speed">13km/h</span>
               </div>
             </div>
           </div>
-          <div class="col-6">
-            <ul>
-              <li>Humidity: <span id="humidity"></span>%</li>
-              <li>Wind: <span id="wind"></span> km/h</li>
-            </ul>
-          </div>
         </div>
+        <small>
+          <a href="https://github.com/DeeJafta" target="_blank">
+            Open-source code
+          </a>
+          ", by Constance Jafta"
+        </small>
+        <script src="src/index.js"></script>
       </div>
     </div>
-    <small>
-      <a href="https://github.com/DeeJafta" target="_blank">
-        Open-source code
-      </a>
-      ", by Constance Jafta"
-    </small>
-    <script src="src/index.js"></script>
   </body>
 </html>
