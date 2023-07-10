@@ -24,16 +24,17 @@ function formatDate(date) {
 }
 
 function displayWeatherCondition(response) {
-  document.querySelector("#city").innerHTML = response.data.name;
-  document.querySelector("#temperature").innerHTML = Math.round(
+  document.querySelector("#weather-location").innerHTML = response.data.name;
+  document.querySelector(".weather-temp--today").innerHTML = Math.round(
     response.data.main.temp
   );
 
-  document.querySelector("#humidity").innerHTML = response.data.main.humidity;
-  document.querySelector("#wind").innerHTML = Math.round(
+  document.querySelector("#precipitation-probality").innerHTML =
+    response.data.main.humidity;
+  document.querySelector("#wind-speed").innerHTML = Math.round(
     response.data.wind.speed
   );
-  document.querySelector("#description").innerHTML =
+  document.querySelector("#weather-description").innerHTML =
     response.data.weather[0].main;
 }
 
@@ -45,7 +46,7 @@ function searchCity(city) {
 
 function handleSubmit(event) {
   event.preventDefault();
-  let city = document.querySelector("#city-input").value;
+  let city = document.querySelector("#weather_form-location").value;
   searchCity(city);
 }
 
@@ -73,14 +74,14 @@ function convertToCelsius(event) {
   temperatureElement.innerHTML = 19;
 }
 
-let dateElement = document.querySelector("#date");
+let dateElement = document.querySelector("#weather-date");
 let currentTime = new Date();
 dateElement.innerHTML = formatDate(currentTime);
 
-let searchForm = document.querySelector("#search-form");
+let searchForm = document.querySelector("#weather_form");
 searchForm.addEventListener("submit", handleSubmit);
 
-let currentLocationButton = document.querySelector("#current-location-button");
+let currentLocationButton = document.querySelector("#weather-refresh");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 
 searchCity("Johannesburg");
