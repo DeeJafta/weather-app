@@ -17,58 +17,49 @@
 
   <body>
     <div class="container">
-      <div class="weather-app">
-        <div class="clearfix">
-          <form id="weather_form" class="float-left">
-            <input
-              type="text"
-              id="weather_form-location"
+      <div class="weather-app-wrapper">
+        <div class="weather-app">
+          <form id="search_form" class="mb-3">
+            <div class="row">
+              <input
+              type="search"
               placeholder="Enter a city"
+              class="form-control"
+              id="city-input"
               autocomplete="off"
-              autofocus="on"
             />
-            <input type="submit" value="Search" class="btn btn-primary" />
+            </div>
+            <div class="col--3">
+            <input type="submit" value="Search" class="btn btn-primary w-100" 
+            />
+            </div>
+          </div>
           </form>
-          <buttton id="weather-refresh" class="float-left btn btn-success"
-            >Current Location</buttton
-          >
-        </div>
-        <div class="weather-summary">
-          <div class="weather-summary-header">
-            <h1 id="weather-location">Lisbon</h1>
+          <div class="overview">
+            <h1 id="city"></h1>
             <ul>
-              <li id="weather-date" class="weather-detail_text">Mon 20;26</li>
-              <li class="weather-detail_text" id="weather-description">
-                Clouds
-              </li>
+              <li>Last updated: <span id="date"></span></li>
+              <li id="description"></li>
             </ul>
           </div>
           <div class="row">
-            <div class="col-md-6">
-              <div class="clearfix">
-                <img
-                  class="weather_icon weather--today"
-                  src="https://openweathermap.org/img/w/02d.png"
-                />
-                <div class="weather-temp weather-temp--today">25</div>
-                <div class="weather-unit_text weather-unit_text--today">°C</div>
+            <div class="col-6">
+              <div class="clearfix weather-temperature">
+                <img src="" alt="Clear" id="icon" class="float-left" />
+                <div class="float-left">
+                  <strong id="temperature"></strong
+                  ><span class="units"> °C</span>
+                </div>
               </div>
             </div>
-            <div class="col-md-6">
-              <div class="weather-detail_text">
-                Precipitation:
-                <span id="precipitation-probality">%</span>
-              </div>
-              <div class="weather-detail_text">
-                Wind:
-                <span id="wind-speed">km/h</span>
-              </div>
-              <div class="weather-detail_text">
-                Humidity:
-                <span id="humidity-probality">%</span>
-              </div>
+            <div class="col-6">
+              <ul>
+                <li>Humidity: <span id="humidity"></span>%</li>
+                <li>Wind: <span id="wind"></span> km/h</li>
+              </ul>
             </div>
           </div>
+          <div class="weather-forecast" id="forecast"></div>
         </div>
         <small>
           <a href="https://github.com/DeeJafta/weather-app" target="_blank">
@@ -76,8 +67,8 @@
           </a>
           , by Constance Jafta
         </small>
-        <script src="index.js"></script>
+        </div>
       </div>
-    </div>
+        <script src="index.js"></script>
   </body>
 </html>
