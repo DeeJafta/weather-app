@@ -41,7 +41,7 @@ function displayTemperature(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
 }
 
-let apiKey = "7746bdeabca928cfedcad71e52fd9d66";
+let apiKey = "743bee57fddbfaf52447193a87d5dd25";
 let city = "Paris";
 let apiUrl = `https://api.openweather.org/data/2.5/weather?q=${city}g&appid=${apiKey}&units=metric`;
 
