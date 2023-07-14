@@ -39,10 +39,11 @@ function displayTemperature(response) {
   iconElement.setAttribute =
     ("src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+  iconElement.setAttribute = ("alt", response.data.weather[0].description);
 }
 
 let apiKey = "743bee57fddbfaf52447193a87d5dd25";
-let city = "Paris";
+let city = "Lisbon";
 let apiUrl = `https://api.openweather.org/data/2.5/weather?q=${city}g&appid=${apiKey}&units=metric`;
 
 axios.get(apiUrl).then(displayTemperature);
