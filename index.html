@@ -11,10 +11,10 @@
       crossorigin="anonymous"
     />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <link rel="stylesheet" href="src/styles.css" />
+
+    <link rel="stylesheet" href="src/style.css" />
     <title>Weather App</title>
   </head>
-
   <body>
     <div class="container">
       <div class="weather-app-wrapper">
@@ -52,7 +52,7 @@
                 <img src="" alt="Clear" id="icon" class="float-left" />
                 <div class="float-left">
                   <strong id="temperature"></strong
-                  ><span class="units">°C | <a href="#">°F</a></span>
+                  ><span class="units"> °C</span>
                 </div>
               </div>
             </div>
@@ -63,12 +63,13 @@
               </ul>
             </div>
           </div>
+          <div class="weather-forecast" id="forecast"></div>
         </div>
         <small>
-          <a href="https://github.com/DeeJafta/weather-app" target="_blank">
-            Open-source code
-          </a>
-          , by Constance Jafta
+          <a href="https://github.com/DeeJafta/weather-app" target="_blank"
+            >Open-source code</a
+          >
+          by Constance Jafta
         </small>
       </div>
     </div>
