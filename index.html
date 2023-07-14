@@ -19,22 +19,6 @@
     <div class="container">
       <div class="weather-app-wrapper">
         <div class="weather-app">
-          <form id="search_form" class="mb-3">
-            <div class="row">
-              <input
-              type="search"
-              placeholder="Enter a city"
-              class="form-control"
-              id="city-input"
-              autocomplete="off"
-            />
-            </div>
-            <div class="col--3">
-            <input type="submit" value="Search" class="btn btn-primary w-100" 
-            />
-            </div>
-          </div>
-          </form>
           <div class="overview">
             <h1 id="city"></h1>
             <ul>
@@ -45,30 +29,33 @@
           <div class="row">
             <div class="col-6">
               <div class="clearfix weather-temperature">
-                <img src="" alt="Clear" id="icon" class="float-left" />
+                <img
+                  src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
+                  alt="Clear"
+                  class="float-left"
+                />
                 <div class="float-left">
-                  <strong id="temperature"></strong
-                  ><span class="units"> °C</span>
+                  <strong id="temperature">12</strong
+                  ><span class="units">°C | <a href="#"></a>°F </span>
                 </div>
               </div>
             </div>
             <div class="col-6">
               <ul>
                 <li>Humidity: <span id="humidity"></span>%</li>
-                <li>Wind: <span id="wind"></span> km/h</li>
+                <li>Wind: <span id="wind"></span>km/h</li>
               </ul>
             </div>
           </div>
-          <div class="weather-forecast" id="forecast"></div>
-        </div>
-        <small>
-          <a href="https://github.com/DeeJafta/weather-app" target="_blank">
-            Open-source code
-          </a>
-          , by Constance Jafta
-        </small>
+          <small>
+            <a href="https://github.com/DeeJafta/weather-app" target="_blank">
+              Open-source code
+            </a>
+            , by Constance Jafta
+          </small>
         </div>
       </div>
-        <script src="index.js"></script>
+      <script src="index.js"></script>
+    </div>
   </body>
 </html>
