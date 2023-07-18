@@ -16,44 +16,61 @@
   </head>
   <body>
     <div class="container">
-      <div class="weather-app-wrapper">
-        <div class="weather-app">
-          <div class="overview">
-            <h1>Soweto</h1>
-            <ul>
-              <li>Sunday 18:00</li>
-              <li>Clear</li>
-            </ul>
-          </div>
+      <div class="weather-app">
+        <form id="search-form" class="mb-3">
           <div class="row">
-            <div class="col-6">
-              <div class="clearfix weather-temperature">
-                <img
-                  src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/clear-sky-day.png"
-                  alt="Clear"
-                  class="float-left"
-                />
-                <div class="float-left">
-                  <strong>12</strong
-                  ><span class="units">°C | <a href="#">°F</a></span>
-                </div>
+            <div class="col-10">
+              <input
+                type="search"
+                placeholder="Type a city. . ."
+                class="form-control"
+                id="city-input"
+              />
+            </div>
+            <div class="col-2">
+              <input type="submit" value="Search" class="btn btn-primary" />
+            </div>
+          </div>
+        </form>
+        <div class="overview">
+          <h1 id="city"></h1>
+          <ul>
+            <li>Last updated at: <span id="date"> </span></li>
+            <li id="description"></li>
+          </ul>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="clearfix weather-temperature">
+              <img
+                src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/clear-sky-day.png"
+                alt="Sunny"
+                id="icon"
+                class="float-left"
+                <div
+                class="float-left"
+              />
+              <div class="float-left">
+                <strong id="temperature"></strong>
+                ><span class="units"> °F</span>
               </div>
             </div>
-            <div class="col-6">
-              <ul>
-                <li>Precipitation: 0%</li>
-                <li>Humidity: 31%</li>
-                <li>Wind: 8km/h</li>
-              </ul>
-            </div>
           </div>
-          <small>
-            <a href="https://github.com/DeeJafta/weather-app" target="_blank"
-              >Open-source code</a
-            >
-            by Constance Jafta
-          </small>
+          <div class="col-6">
+            <ul>
+              <li>Precipitation: 0</li>
+              <li>Humidity: <span id="humidity"></span>%</li>
+              <li>Wind: <span id="wind"></span>km/h</li>
+            </ul>
+          </div>
         </div>
+        <div class="weather-forecast" id="forecast"></div>
+        <small>
+          <a href="https://github.com/DeeJafta/weather-app" target="_blank"
+            >Open-source code</a
+          >
+          by Constance Jafta
+        </small>
       </div>
     </div>
     <script src="src/app.js"></script>
