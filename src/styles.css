@@ -31,9 +31,10 @@ li {
 }
 
 .weather-app {
+  max-width: 600px;
   padding: 20px;
   border: 1px solid #dadde1;
-  border-radius: 5px;
+  border-radius: 50px;
 }
 
 .overview {
@@ -57,4 +58,26 @@ li {
   position: relative;
   font-size: 16px;
   top: -34px;
+}
+
+li:first-letter {
+  text-transform: capitalize;
+}
+
+.weather-forecast {
+  margin-top: 20px;
+  text-align: center;
+  color: rgb(237, 242, 241);
+}
+
+.weather-forecast-date {
+  font-size: 16px;
+}
+
+.weather-forecast-temperatuures-min {
+  opacity: 0.5;
+}
+
+.weather.forecast-temperatures {
+  font-size: 13px;
 }
