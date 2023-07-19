@@ -50,28 +50,26 @@
                 <div
                 class="float-left"
               />
-              <div class="float-left">
-                <strong id="temperature"></strong>
-                ><span class="units"> °F</span>
-              </div>
+              <strong id="temperature"></strong>
+              ><span class="units"> °C</span>
             </div>
           </div>
-          <div class="col-6">
-            <ul>
-              <li>Precipitation: 0</li>
-              <li>Humidity: <span id="humidity"></span>%</li>
-              <li>Wind: <span id="wind"></span>km/h</li>
-            </ul>
-          </div>
         </div>
-        <div class="weather-forecast" id="forecast"></div>
-        <small>
-          <a href="https://github.com/DeeJafta/weather-app" target="_blank"
-            >Open-source code</a
-          >
-          by Constance Jafta
-        </small>
+        <div class="col-6">
+          <ul>
+            <li>Precipitation: <span id="precipitation"></span>%</li>
+            <li>Humidity: <span id="humidity"></span>%</li>
+            <li>Wind: <span id="wind"></span>km/h</li>
+          </ul>
+        </div>
       </div>
+      <div class="weather-forecast" id="forecast"></div>
+      <small>
+        <a href="https://github.com/DeeJafta/weather-app" target="_blank"
+          >Open-source code</a
+        >
+        by Constance Jafta
+      </small>
     </div>
     <script src="src/app.js"></script>
   </body>
