@@ -16,17 +16,16 @@
   </head>
   <body>
     <div class="container">
-      <div class="weather-app-wrapper">
-        <div class="weather-app">
-          <form id="search-form" class="mb-3">
+      <div class="weather-forecast-site">
+        <div class="weather-forecast">
+          <form id="search-form" class="mb-2">
             <div class="row">
-              <div class="col-10">
+              <div class="col-9">
                 <input
                   type="search"
-                  placeholder="Type a city. . ."
+                  placeholder="Enter a city..."
                   class="form-control"
                   id="city-input"
-                  autocomplete="off"
                 />
               </div>
               <div class="col-3">
@@ -34,42 +33,42 @@
                   type="submit"
                   value="Search"
                   class="btn btn-primary w-100"
+                  id="search-input"
                 />
               </div>
             </div>
           </form>
-          <div class="overview">
+          <div class="location">
             <h1 id="city"></h1>
             <ul>
-              <li>Last updated at: <span id="date"> </span></li>
-              <li id="description"></li>
+              <li>Last Updated: <span id="date"></span></li>
+              <li id="condition">Cloudy</li>
             </ul>
           </div>
           <div class="row">
             <div class="col-6">
-              <div class="clearfix weather-temperature">
-                <img
-                  src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/clear-sky-day.png"
-                  alt="Sunny"
-                  id="icon"
-                  class="float-left"
-                  <div
-                  class="float-left"
-                />
-                <strong id="temperature"></strong>
-                ><span class="units"> °C</span>
+              <div class="d-flex weather-temperature">
+                <img src="" alt="cloudy" id="icon" />
+                <div>
+                  <strong id="temp"></strong
+                  ><span class="nums"
+                    ><a href="#" id="celsius" class="active">°C</a>|<a
+                      href="#"
+                      id="fahrenhit"
+                      >°F</a
+                    ></span
+                  >
+                </div>
               </div>
             </div>
-          </div>
-          <div class="col-6">
-            <ul>
-              <li>Precipitation: <span id="precipitation"></span>%</li>
-              <li>Humidity: <span id="humidity"></span>%</li>
-              <li>Wind: <span id="wind"></span>km/h</li>
-            </ul>
+            <div class="col-6">
+              <ul>
+                <li>Humidity: <span id="humii"></span>%</li>
+                <li>Wind: <span id="speed"></span>km/h</li>
+              </ul>
+            </div>
           </div>
         </div>
-        <div class="weather-forecast" id="forecast"></div>
         <small>
           <a href="https://github.com/DeeJafta/weather-app" target="_blank"
             >Open-source code</a
