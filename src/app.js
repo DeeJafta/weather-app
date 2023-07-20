@@ -51,6 +51,11 @@ function searchForCity(event) {
   let cityInput = document.querySelector("#city-input");
   displaySearch(cityInput.value);
 }
+function getCurrentLocation(event) {
+  event.preventDefault();
+  navigator.geolocation.getCurrentPosition(searchLocation);
+}
+
 function showFahrenhitTemperature(event) {
   event.preventDefault();
   let temperaturePart = document.querySelector("#temp");
@@ -76,5 +81,8 @@ fahrenhitPart.addEventListener("click", showFahrenhitTemperature);
 
 let celsiusTemperature = document.querySelector("#celsius");
 celsiusTemperature.addEventListener("click", showCelsiusTemperature);
+
+let currentLocationButton = document.querySelector("#current-location-button");
+currentLocationButton.addEventListener("click", getCurrentLocation);
 
 displaySearch("Soweto");
