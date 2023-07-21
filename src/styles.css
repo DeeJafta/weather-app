@@ -37,7 +37,7 @@ a :hover {
 }
 .weather-forecast {
   padding: 20px;
-  border: 1px solid gray;
+  border: 1px solid grey;
   border-radius: 4px;
 }
 .location {
