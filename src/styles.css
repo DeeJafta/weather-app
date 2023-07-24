@@ -1,15 +1,13 @@
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  background-image: url("https://www.pexels.com/photo/photo-of-mountains-during-sunset-777211/");
-  background-size: auto;
-  background-position: center;
+  font-family: arial, sans-serif;
 }
 
 h1 {
+  color: #878787;
   font-size: 24px;
   font-weight: 100;
-  line-height: 20px;
-  margin-bottom: 5px;
+  line-height: 28px;
+  margin-bottom: 0;
 }
 
 ul {
@@ -19,31 +17,28 @@ ul {
 
 li {
   list-style: none;
-  font-size: 16px;
-  font-weight: 100;
-  line-height: 1.2;
-  color: #7c7c7c;
   margin: 0;
   padding: 0;
+
+  color: rgb(135, 135, 135);
+  font-size: 16px;
+  font-weight: 100;
+  line-height: 19px;
 }
 
 li:first-letter {
   text-transform: capitalize;
 }
 
-a {
-  text-decoration: none;
-}
 .weather-app-wrapper {
   max-width: 600px;
   margin: 30px auto;
 }
 
 .weather-app {
-  border: 1px solid #dadde1;
-  border-radius: 10px;
   padding: 20px;
-  background-color: #dde4e7;
+  border: 1px solid #dadde1;
+  border-radius: 5px;
 }
 
 .overview {
@@ -51,9 +46,9 @@ a {
 }
 
 .weather-temperature img {
-  margin-right: 10px;
-  height: 68px;
-  width: 68px;
+  margin-right: 5px;
+  height: 64px;
+  width: 64px;
 }
 
 .weather-temperature strong {
@@ -66,7 +61,16 @@ a {
 .weather-temperature .units {
   position: relative;
   font-size: 16px;
-  margin-top: 4px;
+  top: -34px;
+}
+
+.weather-temperature .active {
+  color: rgb(33, 33, 33);
+  cursor: default;
+}
+
+.weather-temperature .active:hover {
+  text-decoration: none;
 }
 
 .weather-forecast {
@@ -79,9 +83,11 @@ a {
   font-size: 16px;
   opacity: 0.5;
 }
+
 .weather-forecast-temperature-min {
   opacity: 0.5;
 }
-.weather-forecast-temperature {
+
+.weather-forecast-temperatures {
   font-size: 13px;
 }
