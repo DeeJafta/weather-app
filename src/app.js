@@ -20,6 +20,38 @@ function setDate(timestamp) {
   let day = days[now.getDay()];
   return `${day} ${hour}:${minute}`;
 }
+
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let days = ["Mon", "Tue", "Wed", "Thu"];
+
+  let forecastHTML = `<div class ="row">`;
+
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+<div class="col-2">
+              <div class="weather-forecast-date">${day}</div>
+                <img
+                  src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons"
+                  alt=""
+                  width="42"
+                />
+                <div class="weather-forecast-temperatures">
+                  <span class="weather-forecast-temperatures-max">18°C</span>
+
+                  <span class="weather-forecast-temperatures-min">12°C</span>
+                </div>
+              </div>
+`;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+  console.log(forecastHTML);
+}
+
 function showTemperature(response) {
   let temperaturePart = document.querySelector("#temp");
   celsiusPart = response.data.temperature.current;
@@ -86,3 +118,4 @@ let currentLocationButton = document.querySelector("#current-location-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 
 displaySearch("Soweto");
+displayForecast();
