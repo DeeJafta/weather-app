@@ -1,68 +1,87 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background-image: url(https://www.pexels.com/photo/atmosphere-blue-cloud-cloudiness-268917/);
+  background-image: url("");
   background-size: auto;
   background-position: center;
 }
+
 h1 {
-  color: #878787;
-  font-size: 30px;
+  font-size: 24px;
   font-weight: 100;
-  line-height: 28px;
-  margin-bottom: 0;
+  line-height: 20px;
+  margin-bottom: 5px;
 }
+
 ul {
   margin: 0;
   padding: 0;
 }
+
 li {
-  list-style: none;
-  color: #878787;
   font-size: 16px;
-  text-transform: capitalize;
   font-weight: 100;
-  line-height: 18px;
+  line-height: 1.2;
+  list-style: none;
+  color: #7c7c7c;
   margin: 0;
   padding: 0;
 }
+
+li:first-letter {
+  text-transform: capitalize;
+}
+
 a {
   text-decoration: none;
 }
-a :hover {
-  text-decoration: underline;
-}
-.weather-forecast-site {
+.weather-app-wrapper {
   max-width: 600px;
   margin: 30px auto;
 }
-.weather-forecast {
+
+.weather-app {
+  border: 1px solid #dadde1;
+  border-radius: 10px;
   padding: 20px;
-  border: 1px solid grey;
-  border-radius: 4px;
+  background-color: #dde4e7;
 }
-.location {
+
+.overview {
   margin-bottom: 20px;
 }
+
 .weather-temperature img {
   margin-right: 10px;
-  height: 60px;
-  width: 60px;
+  height: 68px;
+  width: 68px;
 }
+
 .weather-temperature strong {
-  color: black;
+  color: rgb(33, 33, 33);
   font-size: 64px;
+  line-height: 1;
   font-weight: 400;
-  line-height: 64px;
 }
-.weather-temperature span {
+
+.weather-temperature .units {
   position: relative;
   font-size: 16px;
-  top: -32px;
+  margin-top: 4px;
 }
-.weather-temperature .active {
-  color: black;
-  cursor: default;
+
+.weather-forecast {
+  margin-top: 20px;
+  text-align: center;
+  color: #000;
 }
-.weather-temperature .active:hover {
-  text-decoration: none;
+
+.weather-forecast-date {
+  font-size: 16px;
+  opacity: 0.5;
+}
+.weather-forecast-temperature-min {
+  opacity: 0.5;
+}
+.weather-forecast-temperature {
+  font-size: 13px;
 }
