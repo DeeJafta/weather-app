@@ -18,10 +18,10 @@ ul {
 }
 
 li {
+  list-style: none;
   font-size: 16px;
   font-weight: 100;
   line-height: 1.2;
-  list-style: none;
   color: #7c7c7c;
   margin: 0;
   padding: 0;
